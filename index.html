@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashank Kumar - Senior AI Systems Engineer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @page { size: A4; margin: 0; }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            color: #1a1a1a;
+            background: #f5f5f5;
+            line-height: 1.5;
+            font-size: 10pt;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .resume {
+            max-width: 8.5in;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 0.5in 0.55in;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+
+        @media print {
+            body { background: #fff; }
+            .resume { margin: 0; padding: 0.4in 0.5in; box-shadow: none; max-width: none; }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        .header h1 {
+            font-size: 21pt;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #111;
+            margin-bottom: 4px;
+        }
+
+        .header .subtitle {
+            font-size: 9.5pt;
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-row {
+            font-size: 9pt;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4px 16px;
+        }
+
+        .contact-row a { color: #333; text-decoration: none; }
+        .contact-row span { white-space: nowrap; }
+
+        .section { margin-bottom: 12px; }
+
+        .section-title {
+            font-size: 10.5pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #111;
+            border-bottom: 1.5px solid #ccc;
+            padding-bottom: 2px;
+            margin-bottom: 7px;
+        }
+
+        .summary { font-size: 9.5pt; color: #333; line-height: 1.5; }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 145px 1fr;
+            gap: 3px 10px;
+            font-size: 9.5pt;
+        }
+
+        .skills-grid .label { font-weight: 600; color: #222; }
+        .skills-grid .value { color: #333; }
+
+        .job { margin-bottom: 10px; }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .job-title { font-size: 10pt; font-weight: 700; color: #111; }
+        .job-date { font-size: 9pt; color: #555; font-weight: 500; }
+        .job-company { font-size: 9.5pt; font-style: italic; color: #444; margin-bottom: 3px; }
+
+        .job ul { padding-left: 16px; margin-top: 2px; }
+        .job li { font-size: 9.5pt; color: #333; margin-bottom: 2px; line-height: 1.4; }
+
+        .project { margin-bottom: 8px; }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .project-name { font-size: 10pt; font-weight: 700; color: #111; }
+        .project-tech { font-size: 8.5pt; color: #555; font-weight: 500; }
+
+        .project ul { padding-left: 16px; margin-top: 2px; }
+        .project li { font-size: 9.5pt; color: #333; margin-bottom: 2px; line-height: 1.4; }
+
+        .edu-item { margin-bottom: 3px; }
+        .edu-degree { font-weight: 600; font-size: 9.5pt; color: #222; }
+        .edu-school { font-size: 9.5pt; color: #444; }
+        .certs { font-size: 9.5pt; color: #333; margin-top: 4px; }
+
+        .pub-item { margin-bottom: 6px; font-size: 9.5pt; color: #333; }
+        .pub-title { font-weight: 600; color: #111; }
+        .pub-link { font-size: 8.5pt; color: #0066cc; text-decoration: none; word-break: break-all; }
+        .pub-link:hover { text-decoration: underline; }
+        @media print { .pub-link { color: #333; } }
+    </style>
+</head>
+<body>
+    <div class="resume">
+
+        <!-- HEADER -->
+        <div class="header">
+            <h1>Shashank Kumar</h1>
+            <div class="subtitle">Senior AI Systems Engineer | Aerospace Platform Architect | Published Researcher</div>
+            <div class="contact-row">
+                <span>Delhi NCR, India</span>
+                <span>shashankchoudhary792@gmail.com</span>
+                <span>github.com/sidthebuilder</span>
+                <span>linkedin.com/in/shashank-kumar-772a2035b</span>
+            </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <p class="summary">
+                Senior AI Systems Engineer with expertise in distributed swarm orchestration, edge AI inference, adversarial LLM evaluation, and enterprise security architecture. Architected CELLHAWK, a 20-module autonomous aircraft navigation platform. Published researcher on multi-agent FSM orchestration and LLM failure analysis. Top 5% AI evaluator across 1,000+ adversarial tasks. 28+ open-source repositories spanning multi-agent systems, aerospace optimization, and distributed computing.
+            </p>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <span class="label">AI & ML:</span>
+                <span class="value">LLM Fine-Tuning (LoRA, DPO), RAG Pipeline Development, Prompt Engineering, Model Evaluation (MT-Bench, HELM), AI Agent Orchestration, NVIDIA Isaac Sim</span>
+
+                <span class="label">Programming:</span>
+                <span class="value">Python, JavaScript, TypeScript, C#, SQL, Bash</span>
+
+                <span class="label">Backend:</span>
+                <span class="value">FastAPI, Flask, Node.js, Express, PostgreSQL, MongoDB, RESTful APIs</span>
+
+                <span class="label">Frontend:</span>
+                <span class="value">Next.js 14, React, Tailwind CSS, HTML5, CSS3</span>
+
+                <span class="label">Tools & Platforms:</span>
+                <span class="value">Docker, Git, GitHub Actions, n8n, AWS, Hugging Face, OpenAI API, Anthropic API</span>
+            </div>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+
+            <!-- Bitnorm -->
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Full Stack AI Engineer</span>
+                    <span class="job-date">2026</span>
+                </div>
+                <div class="job-company">Bitnorm</div>
+                <ul>
+                    <li>Built and maintained full-stack AI features across the Bitnorm platform, integrating LLM-powered pipelines with production frontend and backend systems.</li>
+                    <li>Conducted comprehensive security audit of the Bitnorm production codebase, identifying password exposure vulnerabilities and PCI compliance violations.</li>
+                    <li>Designed and shipped multi-agent orchestration workflows with Pydantic-enforced JSON contracts and sandboxed code execution environments.</li>
+                </ul>
+            </div>
+
+            <!-- Evaluation -->
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">AI Model Evaluation Specialist</span>
+                    <span class="job-date">2024 - Present</span>
+                </div>
+                <div class="job-company">Outlier, Alignerr, OneForma | Remote</div>
+                <ul>
+                    <li>Constructed 500+ adversarial examples and red-team prompts exposing logical weaknesses in frontier LLMs, improving model safety scores by 25%.</li>
+                    <li>Consistently rated Top Performer (top 5%) across 1,000+ complex evaluation tasks requiring analytical rigor and steel-manning opposing views.</li>
+                    <li>Evaluated 3+ major LLMs on factual accuracy, logical coherence, and truth-seeking behaviors before production release.</li>
+                </ul>
+            </div>
+
+            <!-- Freelance -->
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Freelance AI & Systems Developer</span>
+                    <span class="job-date">2021 - 2024</span>
+                </div>
+                <div class="job-company">Fiverr, Upwork & Direct Clients | Remote</div>
+                <ul>
+                    <li>Architected 30+ applications. Built custom RAG agents improving answer accuracy by 60% and boosting client efficiency by 40%.</li>
+                    <li>Delivered end-to-end AI solutions across finance, healthcare, and SaaS verticals with full autonomy.</li>
+                    <li>Earned a 4.8/5 average platform rating and consistent 5-star reviews for delivering high-impact solutions.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PUBLICATIONS -->
+        <div class="section">
+            <div class="section-title">Publications</div>
+            <div class="pub-item">
+                <span class="pub-title">"Beyond Single Prompts: Engineering a Multi-Agent Workgroup for End-to-End Tabular Data Science"</span> — Independent Research, March 2026. 3-agent FSM orchestrator with adversarial debate loop, 32% RMSE reduction, 94% compilation rate vs 42% for single-shot LLMs.<br>
+                <a class="pub-link" href="https://sidthebuilder.github.io/AutoML-Agent-Orchestrator/" target="_blank">sidthebuilder.github.io/AutoML-Agent-Orchestrator</a>
+            </div>
+            <div class="pub-item">
+                <span class="pub-title">"LLMs Are Not Orchestrators: Fixing Agent Architecture with FSMs"</span> — Independent Research, April 2026. Production post-mortem documenting migration from implicit DAG routing to deterministic finite state machines, achieving 78% reduction in hallucinated loops and 100% deterministic debugging.<br>
+                <a class="pub-link" href="https://x.com/shashank_v8/status/2039585926716989891" target="_blank">x.com/shashank_v8/status/2039585926716989891</a>
+            </div>
+        </div>
+
+        <!-- KEY PROJECTS -->
+        <div class="section">
+            <div class="section-title">Key Projects</div>
+
+            <div class="project">
+                <div class="project-header">
+                    <span class="project-name">CELLHAWK — Autonomous Aircraft Navigation Platform</span>
+                    <span class="project-tech">Python, FastAPI, gRPC, Docker, TimescaleDB, Redis, YOLOv9, PPO/RL</span>
+                </div>
+                <ul>
+                    <li>20-module GPS-denied aircraft platform using RSSI multilateration + EKF for cellular positioning. Swarm orchestrator (1000+ drones), edge AI pipeline (10 Hz), AES-256-GCM fleet security, intelligence fusion with 3-sigma anomaly detection, and PPO RL agent trained on JSBSim flight dynamics.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <span class="project-name">Verdant AI — Multi-Agent Orchestration System</span>
+                    <span class="project-tech">Python, FastAPI, Llama 3, Docker</span>
+                </div>
+                <ul>
+                    <li>High-performance system that autonomously solves coding and physics problems with 85% success rate. Engineered a 7-agent swarm using Router-Delegate pattern, reducing task completion time by 70%. Integrated LoRA fine-tuned Llama 3 and GPT-4 via unified adapter layer, handling 100+ concurrent simulations.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <span class="project-name">NeuroSim Engine — AI Character Simulation</span>
+                    <span class="project-tech">C#, Unity, Behavior Trees</span>
+                </div>
+                <ul>
+                    <li>Simulation platform creating psychologically realistic AI agents with dynamic emotional states. Implemented trait-emotion-goal architecture generating 10,000+ unique behavioral sequences for NPCs. Reduced AI scripting time by 50% via visual behavior tree editor and modular emotion system.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <span class="project-name">QuasiQ — Quantum-Inspired Distributed Optimizer</span>
+                    <span class="project-tech">Python, FastAPI, Celery, Redis, React, Docker</span>
+                </div>
+                <ul>
+                    <li>Distributed hybrid Genetic Algorithm + Simulated Annealing solver for NP-hard optimization. Real-time 3D dashboard, fully Dockerized with CI/CD.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <span class="project-name">Solar Phantom — Perpetual Flight UAV Optimization</span>
+                    <span class="project-tech">Python, AeroSandbox, Non-Linear Optimization</span>
+                </div>
+                <ul>
+                    <li>High-fidelity MDO framework solving the infinite solar UAV flight problem. Technology feasibility maps and 365-day survival window analysis.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <span class="project-name">Additional Projects (28 Repositories)</span>
+                    <span class="project-tech">github.com/sidthebuilder</span>
+                </div>
+                <ul>
+                    <li>GMX TradeDesk (DeFi trading, Arbitrum L2), Isaac Sim Physics (NVIDIA simulation), HDFS Failure Prediction, MTD System (cybersecurity), EcoTwin/EcoNode (IoT), PyRobotics, EvoSim, and 10+ full-stack TypeScript web applications.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="section">
+            <div class="section-title">Education & Certifications</div>
+            <div class="edu-item">
+                <span class="edu-degree">Bachelor of Science in Computer Science (In Progress)</span>
+                <span class="edu-school"> — University of the People</span>
+            </div>
+            <div class="edu-item">
+                <span class="edu-degree">Bachelor of Arts</span>
+                <span class="edu-school"> — Ch. Charan Singh University, Meerut</span>
+            </div>
+            <div class="certs">
+                <strong>Certifications:</strong> Scale AI Annotation Specialist | CS50: Introduction to Computer Science (In Progress)<br>
+                <strong>Languages:</strong> English (Fluent), Hindi (Native)
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
