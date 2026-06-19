@@ -3,326 +3,672 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shashank Kumar - Senior AI Systems Engineer</title>
+    <title>Shashank Kumar — Aerospace & Full Stack AI Developer</title>
+    <meta name="description" content="Shashank Kumar — Senior Aerospace Systems Architect, Full Stack AI Developer, and Published Researcher. Building intelligent systems across aerospace, multi-agent AI, and distributed computing.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         @page { size: A4; margin: 0; }
 
+        :root {
+            --accent: #1a5cff;
+            --accent-light: #e8efff;
+            --accent-dark: #0d3dbf;
+            --text-primary: #0f1117;
+            --text-secondary: #3d4352;
+            --text-muted: #6b7280;
+            --border: #d1d5db;
+            --border-light: #e5e7eb;
+            --bg: #f4f6fb;
+            --bg-white: #ffffff;
+            --gold: #b8860b;
+            --green: #16a34a;
+            --section-bar: #1a5cff;
+        }
+
         body {
-            font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            color: #1a1a1a;
-            background: #f5f5f5;
-            line-height: 1.5;
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            color: var(--text-primary);
+            background: var(--bg);
+            line-height: 1.55;
             font-size: 10pt;
             -webkit-font-smoothing: antialiased;
         }
 
+        /* ── Print & Screen wrapper ── */
         .resume {
             max-width: 8.5in;
-            margin: 20px auto;
-            background: #ffffff;
-            padding: 0.5in 0.55in;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            margin: 30px auto;
+            background: var(--bg-white);
+            padding: 0.52in 0.6in 0.55in;
+            box-shadow: 0 4px 32px rgba(26,92,255,0.08), 0 1px 4px rgba(0,0,0,0.06);
+            border-top: 4px solid var(--accent);
         }
 
         @media print {
             body { background: #fff; }
-            .resume { margin: 0; padding: 0.4in 0.5in; box-shadow: none; max-width: none; }
+            .resume { margin: 0; padding: 0.45in 0.55in; box-shadow: none; max-width: none; border-top: 4px solid var(--accent); }
+            a { color: inherit !important; }
+            .no-print { display: none !important; }
         }
 
+        /* ── HEADER ── */
         .header {
-            text-align: center;
-            margin-bottom: 12px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #1a1a1a;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: start;
+            gap: 12px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--text-primary);
+            margin-bottom: 14px;
         }
 
-        .header h1 {
-            font-size: 21pt;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #111;
-            margin-bottom: 4px;
+        .header-left h1 {
+            font-size: 23pt;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--text-primary);
+            line-height: 1.1;
         }
 
-        .header .subtitle {
-            font-size: 9.5pt;
+        .header-left .subtitle {
+            font-size: 10pt;
             font-weight: 500;
-            color: #444;
-            margin-bottom: 5px;
-            letter-spacing: 0.5px;
+            color: var(--accent);
+            margin-top: 4px;
+            letter-spacing: 0.3px;
         }
 
-        .contact-row {
+        .header-left .tagline {
             font-size: 9pt;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 4px 16px;
+            color: var(--text-muted);
+            margin-top: 3px;
+            font-style: italic;
         }
 
-        .contact-row a { color: #333; text-decoration: none; }
-        .contact-row span { white-space: nowrap; }
+        .header-right {
+            text-align: right;
+            font-size: 8.5pt;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
 
-        .section { margin-bottom: 12px; }
+        .header-right a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-right a:hover { color: var(--accent); text-decoration: underline; }
+
+        .header-right .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 5px;
+        }
+
+        .contact-icon {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            opacity: 0.6;
+        }
+
+        /* ── Availability badge ── */
+        .availability {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #dcfce7;
+            color: var(--green);
+            border: 1px solid #86efac;
+            font-size: 7.5pt;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-top: 5px;
+            letter-spacing: 0.2px;
+        }
+
+        .availability::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--green);
+            border-radius: 50%;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+
+        /* ── SECTION ── */
+        .section { margin-bottom: 14px; }
 
         .section-title {
-            font-size: 10.5pt;
+            font-size: 8.5pt;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #111;
-            border-bottom: 1.5px solid #ccc;
-            padding-bottom: 2px;
-            margin-bottom: 7px;
+            letter-spacing: 2px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
         }
 
-        .summary { font-size: 9.5pt; color: #333; line-height: 1.5; }
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
+        }
 
+        /* ── SUMMARY ── */
+        .summary {
+            font-size: 9.5pt;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding: 10px 12px;
+            background: var(--accent-light);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* ── TWO-COL layout ── */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 24px;
+        }
+
+        /* ── SKILLS ── */
         .skills-grid {
             display: grid;
-            grid-template-columns: 145px 1fr;
-            gap: 3px 10px;
-            font-size: 9.5pt;
+            grid-template-columns: 140px 1fr;
+            gap: 4px 8px;
+            font-size: 9pt;
         }
 
-        .skills-grid .label { font-weight: 600; color: #222; }
-        .skills-grid .value { color: #333; }
+        .skills-grid .label {
+            font-weight: 600;
+            color: var(--text-primary);
+            padding-top: 1px;
+        }
 
-        .job { margin-bottom: 10px; }
+        .skills-grid .value { color: var(--text-secondary); }
+
+        .skill-tag {
+            display: inline-block;
+            font-size: 7.5pt;
+            font-weight: 500;
+            padding: 1px 6px;
+            border-radius: 3px;
+            background: var(--accent-light);
+            color: var(--accent-dark);
+            border: 1px solid #c7d9ff;
+            margin: 1px;
+        }
+
+        /* ── JOBS ── */
+        .job { margin-bottom: 11px; }
 
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             flex-wrap: wrap;
+            gap: 2px;
         }
 
-        .job-title { font-size: 10pt; font-weight: 700; color: #111; }
-        .job-date { font-size: 9pt; color: #555; font-weight: 500; }
-        .job-company { font-size: 9.5pt; font-style: italic; color: #444; margin-bottom: 3px; }
+        .job-title {
+            font-size: 10pt;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
 
-        .job ul { padding-left: 16px; margin-top: 2px; }
-        .job li { font-size: 9.5pt; color: #333; margin-bottom: 2px; line-height: 1.4; }
+        .job-date {
+            font-size: 8.5pt;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+            background: #f3f4f6;
+            padding: 1px 7px;
+            border-radius: 3px;
+        }
 
-        .project { margin-bottom: 8px; }
+        .job-company {
+            font-size: 9pt;
+            font-style: italic;
+            color: var(--accent);
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .job ul { padding-left: 14px; margin-top: 2px; }
+        .job li { font-size: 9pt; color: var(--text-secondary); margin-bottom: 2px; line-height: 1.45; }
+        .job li::marker { color: var(--accent); }
+
+        /* ── PROJECTS ── */
+        .project { margin-bottom: 10px; }
 
         .project-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             flex-wrap: wrap;
+            gap: 4px;
         }
 
-        .project-name { font-size: 10pt; font-weight: 700; color: #111; }
-        .project-tech { font-size: 8.5pt; color: #555; font-weight: 500; }
+        .project-name {
+            font-size: 10pt;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
 
-        .project ul { padding-left: 16px; margin-top: 2px; }
-        .project li { font-size: 9.5pt; color: #333; margin-bottom: 2px; line-height: 1.4; }
+        .project-name a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
 
-        .edu-item { margin-bottom: 3px; }
-        .edu-degree { font-weight: 600; font-size: 9.5pt; color: #222; }
-        .edu-school { font-size: 9.5pt; color: #444; }
-        .certs { font-size: 9.5pt; color: #333; margin-top: 4px; }
+        .project-name a:hover { color: var(--accent); text-decoration: underline; }
 
-        .pub-item { margin-bottom: 6px; font-size: 9.5pt; color: #333; }
-        .pub-title { font-weight: 600; color: #111; }
-        .pub-link { font-size: 8.5pt; color: #0066cc; text-decoration: none; word-break: break-all; }
-        .pub-link:hover { text-decoration: underline; }
-        @media print { .pub-link { color: #333; } }
+        .project-tech {
+            font-size: 7.5pt;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+            background: #f9fafb;
+            padding: 1px 6px;
+            border-radius: 3px;
+            border: 1px solid var(--border-light);
+        }
+
+        .project ul { padding-left: 14px; margin-top: 3px; }
+        .project li { font-size: 9pt; color: var(--text-secondary); margin-bottom: 2px; line-height: 1.45; }
+        .project li::marker { color: var(--accent); }
+
+        .project-link {
+            font-size: 8pt;
+            color: var(--accent);
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+            border-bottom: 1px dashed var(--accent);
+        }
+
+        .project-link:hover { border-bottom-style: solid; }
+
+        /* ── PUBLICATIONS ── */
+        .pub-item { margin-bottom: 8px; font-size: 9pt; color: var(--text-secondary); }
+        .pub-title { font-weight: 700; color: var(--text-primary); }
+        .pub-meta { color: var(--text-muted); font-size: 8.5pt; }
+        .pub-link {
+            font-size: 8pt;
+            color: var(--accent);
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+            word-break: break-all;
+            border-bottom: 1px dashed var(--accent);
+        }
+        .pub-link:hover { border-bottom-style: solid; }
+
+        /* ── EDUCATION ── */
+        .edu-item { margin-bottom: 5px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+        .edu-degree { font-weight: 600; font-size: 9.5pt; color: var(--text-primary); }
+        .edu-school { font-size: 9pt; color: var(--text-muted); font-style: italic; }
+        .edu-year { font-size: 8.5pt; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+
+        .certs { font-size: 9pt; color: var(--text-secondary); margin-top: 6px; line-height: 1.6; }
+
+        /* ── STAT PILLS ── */
+        .stats-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .stat-pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #f8faff;
+            border: 1px solid #dce8ff;
+            border-radius: 6px;
+            padding: 5px 10px;
+            font-size: 8.5pt;
+        }
+
+        .stat-pill .stat-num {
+            font-weight: 800;
+            color: var(--accent);
+            font-size: 11pt;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .stat-pill .stat-label { color: var(--text-secondary); }
+
+        /* ── Footer ── */
+        .resume-footer {
+            margin-top: 14px;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 8pt;
+            color: var(--text-muted);
+        }
+
+        .resume-footer a { color: var(--accent); text-decoration: none; }
+        .resume-footer a:hover { text-decoration: underline; }
+
+        /* ── Print button (web only) ── */
+        .print-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 9pt;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(26,92,255,0.3);
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .print-btn:hover { background: var(--accent-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(26,92,255,0.4); }
+
+        @media print { .print-btn { display: none; } }
+
+        /* ── Divider between jobs ── */
+        .job + .job { border-top: 1px dashed var(--border-light); padding-top: 8px; }
+        .project + .project { border-top: 1px dashed var(--border-light); padding-top: 8px; }
     </style>
 </head>
 <body>
-    <div class="resume">
 
-        <!-- HEADER -->
-        <div class="header">
+<button class="print-btn no-print" onclick="window.print()">
+    🖨️ Download / Print PDF
+</button>
+
+<div class="resume">
+
+    <!-- ══ HEADER ══ -->
+    <div class="header">
+        <div class="header-left">
             <h1>Shashank Kumar</h1>
-            <div class="subtitle">Senior AI Systems Engineer | Aerospace Platform Architect | Published Researcher</div>
-            <div class="contact-row">
-                <span>Delhi NCR, India</span>
-                <span>shashankchoudhary792@gmail.com</span>
-                <span>github.com/sidthebuilder</span>
-                <span>linkedin.com/in/shashank-kumar-772a2035b</span>
+            <div class="subtitle">Senior Aerospace & Full Stack AI Developer &nbsp;·&nbsp; Published Researcher</div>
+            <div class="tagline">Building autonomous systems at the intersection of aerospace, AI, and distributed computing</div>
+            <div class="availability">Available for Global Clients &amp; Remote Contracts</div>
+        </div>
+        <div class="header-right">
+            <div class="contact-item">
+                📍 Delhi NCR, India
+            </div>
+            <div class="contact-item">
+                📧 <a href="mailto:shashankchoudhary792@gmail.com">shashankchoudhary792@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                🐙 <a href="https://github.com/sidthebuilder" target="_blank">github.com/sidthebuilder</a>
+            </div>
+            <div class="contact-item">
+                💼 <a href="https://linkedin.com/in/shashank-kumar-772a2035b" target="_blank">linkedin.com/in/shashank-kumar</a>
+            </div>
+            <div class="contact-item">
+                🌐 <a href="https://sidthebuilder.github.io" target="_blank">sidthebuilder.github.io</a>
             </div>
         </div>
-
-        <!-- SUMMARY -->
-        <div class="section">
-            <div class="section-title">Professional Summary</div>
-            <p class="summary">
-                Senior AI Systems Engineer with expertise in distributed swarm orchestration, edge AI inference, adversarial LLM evaluation, and enterprise security architecture. Architected CELLHAWK, a 20-module autonomous aircraft navigation platform. Published researcher on multi-agent FSM orchestration and LLM failure analysis. Top 5% AI evaluator across 1,000+ adversarial tasks. 28+ open-source repositories spanning multi-agent systems, aerospace optimization, and distributed computing.
-            </p>
-        </div>
-
-        <!-- SKILLS -->
-        <div class="section">
-            <div class="section-title">Technical Skills</div>
-            <div class="skills-grid">
-                <span class="label">AI & ML:</span>
-                <span class="value">LLM Fine-Tuning (LoRA, DPO), RAG Pipeline Development, Prompt Engineering, Model Evaluation (MT-Bench, HELM), AI Agent Orchestration, NVIDIA Isaac Sim</span>
-
-                <span class="label">Programming:</span>
-                <span class="value">Python, JavaScript, TypeScript, C#, SQL, Bash</span>
-
-                <span class="label">Backend:</span>
-                <span class="value">FastAPI, Flask, Node.js, Express, PostgreSQL, MongoDB, RESTful APIs</span>
-
-                <span class="label">Frontend:</span>
-                <span class="value">Next.js 14, React, Tailwind CSS, HTML5, CSS3</span>
-
-                <span class="label">Tools & Platforms:</span>
-                <span class="value">Docker, Git, GitHub Actions, n8n, AWS, Hugging Face, OpenAI API, Anthropic API</span>
-            </div>
-        </div>
-
-        <!-- EXPERIENCE -->
-        <div class="section">
-            <div class="section-title">Professional Experience</div>
-
-            <!-- Bitnorm -->
-            <div class="job">
-                <div class="job-header">
-                    <span class="job-title">Full Stack AI Engineer</span>
-                    <span class="job-date">2026</span>
-                </div>
-                <div class="job-company">Bitnorm</div>
-                <ul>
-                    <li>Built and maintained full-stack AI features across the Bitnorm platform, integrating LLM-powered pipelines with production frontend and backend systems.</li>
-                    <li>Conducted comprehensive security audit of the Bitnorm production codebase, identifying password exposure vulnerabilities and PCI compliance violations.</li>
-                    <li>Designed and shipped multi-agent orchestration workflows with Pydantic-enforced JSON contracts and sandboxed code execution environments.</li>
-                </ul>
-            </div>
-
-            <!-- Evaluation -->
-            <div class="job">
-                <div class="job-header">
-                    <span class="job-title">AI Model Evaluation Specialist</span>
-                    <span class="job-date">2024 - Present</span>
-                </div>
-                <div class="job-company">Outlier, Alignerr, OneForma | Remote</div>
-                <ul>
-                    <li>Constructed 500+ adversarial examples and red-team prompts exposing logical weaknesses in frontier LLMs, improving model safety scores by 25%.</li>
-                    <li>Consistently rated Top Performer (top 5%) across 1,000+ complex evaluation tasks requiring analytical rigor and steel-manning opposing views.</li>
-                    <li>Evaluated 3+ major LLMs on factual accuracy, logical coherence, and truth-seeking behaviors before production release.</li>
-                </ul>
-            </div>
-
-            <!-- Freelance -->
-            <div class="job">
-                <div class="job-header">
-                    <span class="job-title">Freelance AI & Systems Developer</span>
-                    <span class="job-date">2021 - 2024</span>
-                </div>
-                <div class="job-company">Fiverr, Upwork & Direct Clients | Remote</div>
-                <ul>
-                    <li>Architected 30+ applications. Built custom RAG agents improving answer accuracy by 60% and boosting client efficiency by 40%.</li>
-                    <li>Delivered end-to-end AI solutions across finance, healthcare, and SaaS verticals with full autonomy.</li>
-                    <li>Earned a 4.8/5 average platform rating and consistent 5-star reviews for delivering high-impact solutions.</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- PUBLICATIONS -->
-        <div class="section">
-            <div class="section-title">Publications</div>
-            <div class="pub-item">
-                <span class="pub-title">"Beyond Single Prompts: Engineering a Multi-Agent Workgroup for End-to-End Tabular Data Science"</span> — Independent Research, March 2026. 3-agent FSM orchestrator with adversarial debate loop, 32% RMSE reduction, 94% compilation rate vs 42% for single-shot LLMs.<br>
-                <a class="pub-link" href="https://sidthebuilder.github.io/AutoML-Agent-Orchestrator/" target="_blank">sidthebuilder.github.io/AutoML-Agent-Orchestrator</a>
-            </div>
-            <div class="pub-item">
-                <span class="pub-title">"LLMs Are Not Orchestrators: Fixing Agent Architecture with FSMs"</span> — Independent Research, April 2026. Production post-mortem documenting migration from implicit DAG routing to deterministic finite state machines, achieving 78% reduction in hallucinated loops and 100% deterministic debugging.<br>
-                <a class="pub-link" href="https://x.com/shashank_v8/status/2039585926716989891" target="_blank">x.com/shashank_v8/status/2039585926716989891</a>
-            </div>
-        </div>
-
-        <!-- KEY PROJECTS -->
-        <div class="section">
-            <div class="section-title">Key Projects</div>
-
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">CELLHAWK — Autonomous Aircraft Navigation Platform</span>
-                    <span class="project-tech">Python, FastAPI, gRPC, Docker, TimescaleDB, Redis, YOLOv9, PPO/RL</span>
-                </div>
-                <ul>
-                    <li>20-module GPS-denied aircraft platform using RSSI multilateration + EKF for cellular positioning. Swarm orchestrator (1000+ drones), edge AI pipeline (10 Hz), AES-256-GCM fleet security, intelligence fusion with 3-sigma anomaly detection, and PPO RL agent trained on JSBSim flight dynamics.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">Verdant AI — Multi-Agent Orchestration System</span>
-                    <span class="project-tech">Python, FastAPI, Llama 3, Docker</span>
-                </div>
-                <ul>
-                    <li>High-performance system that autonomously solves coding and physics problems with 85% success rate. Engineered a 7-agent swarm using Router-Delegate pattern, reducing task completion time by 70%. Integrated LoRA fine-tuned Llama 3 and GPT-4 via unified adapter layer, handling 100+ concurrent simulations.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">NeuroSim Engine — AI Character Simulation</span>
-                    <span class="project-tech">C#, Unity, Behavior Trees</span>
-                </div>
-                <ul>
-                    <li>Simulation platform creating psychologically realistic AI agents with dynamic emotional states. Implemented trait-emotion-goal architecture generating 10,000+ unique behavioral sequences for NPCs. Reduced AI scripting time by 50% via visual behavior tree editor and modular emotion system.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">QuasiQ — Quantum-Inspired Distributed Optimizer</span>
-                    <span class="project-tech">Python, FastAPI, Celery, Redis, React, Docker</span>
-                </div>
-                <ul>
-                    <li>Distributed hybrid Genetic Algorithm + Simulated Annealing solver for NP-hard optimization. Real-time 3D dashboard, fully Dockerized with CI/CD.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">Solar Phantom — Perpetual Flight UAV Optimization</span>
-                    <span class="project-tech">Python, AeroSandbox, Non-Linear Optimization</span>
-                </div>
-                <ul>
-                    <li>High-fidelity MDO framework solving the infinite solar UAV flight problem. Technology feasibility maps and 365-day survival window analysis.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">Additional Projects (28 Repositories)</span>
-                    <span class="project-tech">github.com/sidthebuilder</span>
-                </div>
-                <ul>
-                    <li>GMX TradeDesk (DeFi trading, Arbitrum L2), Isaac Sim Physics (NVIDIA simulation), HDFS Failure Prediction, MTD System (cybersecurity), EcoTwin/EcoNode (IoT), PyRobotics, EvoSim, and 10+ full-stack TypeScript web applications.</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- EDUCATION -->
-        <div class="section">
-            <div class="section-title">Education & Certifications</div>
-            <div class="edu-item">
-                <span class="edu-degree">Bachelor of Science in Computer Science (In Progress)</span>
-                <span class="edu-school"> — University of the People</span>
-            </div>
-            <div class="edu-item">
-                <span class="edu-degree">Bachelor of Arts</span>
-                <span class="edu-school"> — Ch. Charan Singh University, Meerut</span>
-            </div>
-            <div class="certs">
-                <strong>Certifications:</strong> Scale AI Annotation Specialist | CS50: Introduction to Computer Science (In Progress)<br>
-                <strong>Languages:</strong> English (Fluent), Hindi (Native)
-            </div>
-        </div>
-
     </div>
+
+    <!-- ══ IMPACT STATS ══ -->
+    <div class="stats-row">
+        <div class="stat-pill">
+            <span class="stat-num">28+</span>
+            <span class="stat-label">Open-Source Repos</span>
+        </div>
+        <div class="stat-pill">
+            <span class="stat-num">30+</span>
+            <span class="stat-label">Client Projects Shipped</span>
+        </div>
+        <div class="stat-pill">
+            <span class="stat-num">Top 5%</span>
+            <span class="stat-label">AI Evaluator (1000+ tasks)</span>
+        </div>
+        <div class="stat-pill">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Years Global Clients</span>
+        </div>
+        <div class="stat-pill">
+            <span class="stat-num">4.8★</span>
+            <span class="stat-label">Freelance Rating</span>
+        </div>
+    </div>
+
+    <!-- ══ SUMMARY ══ -->
+    <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <p class="summary">
+            Senior Aerospace &amp; Full Stack AI Developer with expertise in autonomous aircraft navigation, distributed swarm orchestration, edge AI inference, and adversarial LLM evaluation. Architected <strong>CELLHAWK</strong> — a 20-module GPS-denied autonomous aircraft platform. Published researcher on multi-agent FSM orchestration and LLM failure analysis. Currently working with <strong>worldwide clients</strong> across aerospace, finance, healthcare, and SaaS verticals, delivering production-grade AI systems end-to-end. 28+ open-source repositories. Top 5% AI evaluator across 1,000+ adversarial tasks.
+        </p>
+    </div>
+
+    <!-- ══ SKILLS ══ -->
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+            <span class="label">AI &amp; ML:</span>
+            <span class="value">LLM Fine-Tuning (LoRA, DPO), RAG Pipeline Development, Prompt Engineering, Model Evaluation (MT-Bench, HELM), AI Agent Orchestration, NVIDIA Isaac Sim, PPO/RL, YOLOv9</span>
+
+            <span class="label">Aerospace/Sim:</span>
+            <span class="value">JSBSim Flight Dynamics, RSSI Multilateration, Extended Kalman Filter (EKF), AeroSandbox MDO, Drone Swarm Orchestration, NVIDIA Isaac Sim</span>
+
+            <span class="label">Programming:</span>
+            <span class="value">Python, JavaScript, TypeScript, C#, SQL, Bash</span>
+
+            <span class="label">Backend:</span>
+            <span class="value">FastAPI, Flask, Node.js, Express, PostgreSQL, MongoDB, gRPC, RESTful APIs, Celery, Redis, TimescaleDB</span>
+
+            <span class="label">Frontend:</span>
+            <span class="value">Next.js 14, React, Tailwind CSS, HTML5, CSS3, Real-Time Dashboards</span>
+
+            <span class="label">Tools &amp; Cloud:</span>
+            <span class="value">Docker, Git, GitHub Actions, AWS, n8n, Hugging Face, OpenAI API, Anthropic API, CI/CD Pipelines, AES-256-GCM</span>
+        </div>
+    </div>
+
+    <!-- ══ EXPERIENCE ══ -->
+    <div class="section">
+        <div class="section-title">Professional Experience</div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Full Stack AI Engineer</span>
+                <span class="job-date">2026 – Present</span>
+            </div>
+            <div class="job-company">Bitnorm &nbsp;·&nbsp; Full-Time Remote</div>
+            <ul>
+                <li>Built and maintained full-stack AI features across the Bitnorm platform, integrating LLM-powered pipelines with production frontend and backend systems.</li>
+                <li>Conducted comprehensive security audit of the Bitnorm production codebase, identifying password exposure vulnerabilities and PCI compliance violations — resolved before production release.</li>
+                <li>Designed and shipped multi-agent orchestration workflows with Pydantic-enforced JSON contracts and sandboxed code execution environments.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">AI Model Evaluation Specialist</span>
+                <span class="job-date">2024 – Present</span>
+            </div>
+            <div class="job-company">Outlier · Alignerr · OneForma &nbsp;·&nbsp; Remote (Global)</div>
+            <ul>
+                <li>Constructed 500+ adversarial examples and red-team prompts exposing logical weaknesses in frontier LLMs, improving model safety scores by 25%.</li>
+                <li>Consistently rated <strong>Top Performer (top 5%)</strong> across 1,000+ complex evaluation tasks requiring analytical rigor and steel-manning opposing views.</li>
+                <li>Evaluated 3+ major LLMs (GPT-4, Claude, Gemini-class) on factual accuracy, logical coherence, and truth-seeking behaviors before production release.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Freelance AI &amp; Systems Developer</span>
+                <span class="job-date">2021 – 2024</span>
+            </div>
+            <div class="job-company">Fiverr · Upwork · Direct Clients &nbsp;·&nbsp; Remote (Worldwide)</div>
+            <ul>
+                <li>Architected 30+ applications for international clients. Built custom RAG agents improving answer accuracy by 60% and boosting client efficiency by 40%.</li>
+                <li>Delivered end-to-end AI solutions across finance, healthcare, and SaaS verticals with full autonomy from design to deployment.</li>
+                <li>Earned a <strong>4.8/5 average platform rating</strong> and consistent 5-star reviews across global clients.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ══ PUBLICATIONS ══ -->
+    <div class="section">
+        <div class="section-title">Research &amp; Publications</div>
+
+        <div class="pub-item">
+            <span class="pub-title">"Beyond Single Prompts: Engineering a Multi-Agent Workgroup for End-to-End Tabular Data Science"</span><br>
+            <span class="pub-meta">Independent Research — March 2026</span><br>
+            3-agent FSM orchestrator with adversarial debate loop. Achieved <strong>32% RMSE reduction</strong> and <strong>94% code compilation rate</strong> vs 42% for single-shot LLMs.<br>
+            🔗 <a class="pub-link" href="https://sidthebuilder.github.io/AutoML-Agent-Orchestrator/" target="_blank">sidthebuilder.github.io/AutoML-Agent-Orchestrator</a>
+        </div>
+
+        <div class="pub-item">
+            <span class="pub-title">"LLMs Are Not Orchestrators: Fixing Agent Architecture with FSMs"</span><br>
+            <span class="pub-meta">Independent Research — April 2026</span><br>
+            Production post-mortem documenting migration from implicit DAG routing to deterministic finite state machines. Achieved <strong>78% reduction in hallucinated loops</strong> and <strong>100% deterministic debugging</strong>.<br>
+            🔗 <a class="pub-link" href="https://x.com/shashank_v8/status/2039585926716989891" target="_blank">x.com/shashank_v8 · Thread</a>
+        </div>
+    </div>
+
+    <!-- ══ KEY PROJECTS ══ -->
+    <div class="section">
+        <div class="section-title">Key Projects</div>
+
+        <div class="project">
+            <div class="project-header">
+                <span class="project-name">
+                    <a href="https://github.com/sidthebuilder/CELLHAWK" target="_blank">CELLHAWK</a>
+                    &nbsp;—&nbsp; Autonomous Aircraft Navigation Platform
+                </span>
+                <span class="project-tech">Python · FastAPI · gRPC · Docker · TimescaleDB · Redis · YOLOv9 · PPO/RL</span>
+            </div>
+            <ul>
+                <li>20-module GPS-denied aircraft platform using RSSI multilateration + EKF for cellular positioning. Swarm orchestrator for <strong>1000+ drones</strong>, edge AI pipeline at <strong>10 Hz</strong>, AES-256-GCM fleet security, intelligence fusion with 3-sigma anomaly detection, and PPO RL agent trained on JSBSim flight dynamics.</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <span class="project-name">
+                    <a href="https://github.com/sidthebuilder/verdant-ai" target="_blank">Verdant AI</a>
+                    &nbsp;—&nbsp; Multi-Agent Orchestration System
+                </span>
+                <span class="project-tech">Python · FastAPI · Llama 3 · LoRA · Docker</span>
+            </div>
+            <ul>
+                <li>High-performance system autonomously solving coding and physics problems with <strong>85% success rate</strong>. Engineered a 7-agent swarm using Router-Delegate pattern, reducing task completion time by <strong>70%</strong>. Integrated LoRA fine-tuned Llama 3 and GPT-4 via unified adapter layer, handling 100+ concurrent simulations.</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <span class="project-name">
+                    <a href="https://github.com/sidthebuilder/solar-phantom" target="_blank">Solar Phantom</a>
+                    &nbsp;—&nbsp; Perpetual Flight UAV Optimization
+                </span>
+                <span class="project-tech">Python · AeroSandbox · Non-Linear Optimization · MDO</span>
+            </div>
+            <ul>
+                <li>High-fidelity multi-disciplinary optimization (MDO) framework solving the infinite solar UAV flight problem. Technology feasibility maps and 365-day survival window analysis across global latitudes.</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <span class="project-name">
+                    <a href="https://github.com/sidthebuilder/neurosim-engine" target="_blank">NeuroSim Engine</a>
+                    &nbsp;—&nbsp; AI Character Simulation
+                </span>
+                <span class="project-tech">C# · Unity · Behavior Trees · Emotion Systems</span>
+            </div>
+            <ul>
+                <li>Simulation platform creating psychologically realistic AI agents with dynamic emotional states. Trait-emotion-goal architecture generating <strong>10,000+ unique behavioral sequences</strong>. Reduced AI scripting time by 50% via visual behavior tree editor.</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <span class="project-name">
+                    <a href="https://github.com/sidthebuilder/quasiq" target="_blank">QuasiQ</a>
+                    &nbsp;—&nbsp; Quantum-Inspired Distributed Optimizer
+                </span>
+                <span class="project-tech">Python · FastAPI · Celery · Redis · React · Docker</span>
+            </div>
+            <ul>
+                <li>Distributed hybrid Genetic Algorithm + Simulated Annealing solver for NP-hard optimization. Real-time 3D visualization dashboard, fully Dockerized with CI/CD pipeline.</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <span class="project-name">Additional Projects (28+ Repositories)</span>
+                <span class="project-tech">
+                    <a class="project-link" href="https://github.com/sidthebuilder" target="_blank">github.com/sidthebuilder →</a>
+                </span>
+            </div>
+            <ul>
+                <li><strong>GMX TradeDesk</strong> (DeFi trading, Arbitrum L2) · <strong>Isaac Sim Physics</strong> (NVIDIA simulation) · <strong>HDFS Failure Prediction</strong> · <strong>MTD System</strong> (cybersecurity) · <strong>EcoTwin/EcoNode</strong> (IoT) · <strong>PyRobotics</strong> · <strong>EvoSim</strong> · 10+ full-stack TypeScript web applications.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ══ EDUCATION ══ -->
+    <div class="section">
+        <div class="section-title">Education &amp; Certifications</div>
+
+        <div class="edu-item">
+            <div>
+                <span class="edu-degree">Bachelor of Science — Computer Science</span>
+                <span class="edu-school"> &nbsp;·&nbsp; University of the People (In Progress)</span>
+            </div>
+            <span class="edu-year">2024 –</span>
+        </div>
+
+        <div class="edu-item">
+            <div>
+                <span class="edu-degree">Bachelor of Arts</span>
+                <span class="edu-school"> &nbsp;·&nbsp; Ch. Charan Singh University, Meerut</span>
+            </div>
+        </div>
+
+        <div class="certs">
+            <strong>Certifications:</strong> Scale AI Annotation Specialist &nbsp;·&nbsp; CS50: Introduction to Computer Science (In Progress)<br>
+            <strong>Languages:</strong> English (Fluent) &nbsp;·&nbsp; Hindi (Native)
+        </div>
+    </div>
+
+    <!-- ══ FOOTER ══ -->
+    <div class="resume-footer">
+        <span>References &amp; project demos available on request</span>
+        <span>
+            <a href="https://github.com/sidthebuilder" target="_blank">github.com/sidthebuilder</a>
+            &nbsp;·&nbsp;
+            <a href="https://sidthebuilder.github.io" target="_blank">sidthebuilder.github.io</a>
+        </span>
+        <span>Updated June 2026</span>
+    </div>
+
+</div>
+
 </body>
 </html>
