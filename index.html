@@ -3,608 +3,475 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shashank Kumar — AI Systems Engineer</title>
-    <meta name="description" content="Shashank Kumar — AI Systems Engineer specialising in Multi-Agent Systems, LLM Pipelines, and Distributed AI. Published researcher on SSRN. Based in Delhi NCR, India.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <title>Shashank Kumar - Resume</title>
     <style>
-        /* ── Reset ── */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
 
-        @page { size: A4; margin: 0; }
-
-        /* ── Tokens ── */
-        :root {
-            --accent:        #1a56db;
-            --accent-soft:   #eff4ff;
-            --accent-mid:    #3b82f6;
-            --text-900:      #0d1117;
-            --text-700:      #374151;
-            --text-500:      #6b7280;
-            --text-400:      #9ca3af;
-            --border:        #d1d5db;
-            --border-light:  #e5e7eb;
-            --bg-page:       #f0f4f8;
-            --bg-card:       #f8fafc;
-            --mono:          'JetBrains Mono', 'Courier New', monospace;
-        }
-
-        /* ── Body ── */
         body {
-            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-            color: var(--text-900);
-            background: var(--bg-page);
-            font-size: 9.6pt;
-            line-height: 1.55;
-            -webkit-font-smoothing: antialiased;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1f2937;
+            line-height: 1.5;
+            margin: 0;
+            padding: 40px;
+            font-size: 12px;
         }
-
-        /* ── Page ── */
-        .resume {
-            max-width: 8.5in;
-            margin: 28px auto;
-            background: #fff;
-            padding: 0.55in 0.62in 0.5in;
-            box-shadow: 0 2px 24px rgba(0,0,0,0.09);
-            border-top: 3.5px solid var(--accent);
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 0;
         }
-
-        @media print {
-            body { background: #fff; }
-            .resume { margin: 0; padding: 0.45in 0.55in 0.45in; box-shadow: none; max-width: none; }
-            .no-print { display: none !important; }
-            a { color: inherit !important; text-decoration: none !important; }
-            .pub-card-link { border: 1px solid #d1d5db !important; }
-        }
-
-        /* ── Print button ── */
-        .print-btn {
-            position: fixed;
-            bottom: 22px;
-            right: 22px;
-            background: var(--accent);
-            color: #fff;
-            border: none;
-            padding: 9px 18px;
-            border-radius: 7px;
-            font: 600 9pt 'Inter', sans-serif;
-            cursor: pointer;
-            box-shadow: 0 3px 14px rgba(26,86,219,.35);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: background .2s, transform .15s;
-        }
-        .print-btn:hover { background: #1447c2; transform: translateY(-1px); }
-
-        /* ══════════════════════════════════════
-           HEADER
-        ══════════════════════════════════════ */
-        .header {
+        header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            gap: 16px;
-            padding-bottom: 11px;
-            border-bottom: 2px solid var(--text-900);
-            margin-bottom: 13px;
+            margin-bottom: 24px;
         }
-
-        .header-name {
-            font-size: 22pt;
+        .header-left h1 {
+            margin: 0;
+            font-size: 36px;
             font-weight: 800;
-            letter-spacing: -0.4px;
-            color: var(--text-900);
-            line-height: 1.05;
+            color: #111827;
+            letter-spacing: -0.5px;
         }
-
-        .header-title {
-            font-size: 9.5pt;
+        .header-left p {
+            margin: 6px 0 0 0;
+            color: #2563eb;
             font-weight: 500;
-            color: var(--accent);
-            margin-top: 5px;
-            letter-spacing: 0.1px;
+            font-size: 13px;
         }
-
-        .header-contacts {
+        .header-right {
             text-align: right;
-            font-size: 8.6pt;
-            color: var(--text-700);
-            line-height: 1.9;
-            flex-shrink: 0;
+            color: #4b5563;
+            font-size: 12px;
+            line-height: 1.6;
         }
-
-        .header-contacts a {
-            color: var(--text-700);
+        .header-right a {
+            color: #6b7280;
             text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: color .15s, border-color .15s;
         }
-        .header-contacts a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-
-        /* ══════════════════════════════════════
-           SECTION
-        ══════════════════════════════════════ */
-        .section { margin-bottom: 13px; }
-
         .section-title {
-            font-size: 7.8pt;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2.2px;
-            color: var(--text-900);
             display: flex;
             align-items: center;
-            gap: 8px;
-            margin-bottom: 7px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #111827;
+            margin-top: 24px;
+            margin-bottom: 12px;
         }
         .section-title::after {
             content: '';
             flex: 1;
-            height: 1.5px;
-            background: var(--text-900);
-            border-radius: 2px;
+            border-bottom: 2px solid #111827;
+            margin-left: 16px;
         }
-
-        /* ══════════════════════════════════════
-           SUMMARY
-        ══════════════════════════════════════ */
-        .summary { font-size: 9.4pt; color: var(--text-700); line-height: 1.6; }
-
-        /* ══════════════════════════════════════
-           KEY ACHIEVEMENTS — two-column bullets
-        ══════════════════════════════════════ */
+        p { margin: 0 0 10px 0; }
+        ul { margin: 0 0 10px 0; padding-left: 20px; color: #374151; }
+        li { margin-bottom: 4px; }
+        
+        .blue-bullet {
+            list-style: none;
+            padding-left: 0;
+        }
+        .blue-bullet li {
+            position: relative;
+            padding-left: 14px;
+        }
+        .blue-bullet li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-size: 8px;
+            top: 4px;
+        }
         .achievements-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3px 24px;
+            gap: 4px 24px;
         }
-        .ach-item {
-            font-size: 9pt;
-            color: var(--text-700);
-            display: flex;
-            gap: 6px;
-            align-items: flex-start;
-            line-height: 1.45;
-        }
-        .ach-item::before {
-            content: '▸';
-            color: var(--accent);
-            flex-shrink: 0;
-            margin-top: 0px;
-            font-size: 9pt;
-        }
-
-        /* ══════════════════════════════════════
-           SKILLS
-        ══════════════════════════════════════ */
-        .skills-table {
+        
+        .skills-grid {
             display: grid;
-            grid-template-columns: 108px 1fr;
-            gap: 3px 10px;
-            font-size: 9pt;
+            grid-template-columns: 120px 1fr;
+            gap: 6px 12px;
+            margin-bottom: 16px;
         }
-        .sk-label { font-weight: 600; color: var(--text-900); white-space: nowrap; padding-top: 1px; }
-        .sk-value { color: var(--text-700); }
-
-        /* ══════════════════════════════════════
-           EXPERIENCE
-        ══════════════════════════════════════ */
-        .job { margin-bottom: 10px; }
-        .job + .job { border-top: 1px solid var(--border-light); padding-top: 9px; }
-
-        .job-top {
+        .skills-grid strong {
+            color: #111827;
+            font-weight: 600;
+        }
+        
+        .experience-item { margin-bottom: 16px; }
+        .experience-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            gap: 8px;
-            flex-wrap: wrap;
         }
-        .job-title  { font-size: 9.8pt; font-weight: 700; color: var(--text-900); }
-        .job-date   { font-size: 8.4pt; color: var(--text-500); font-family: var(--mono); white-space: nowrap; }
-        .job-org    { font-size: 9pt; color: var(--accent); font-style: italic; margin: 1px 0 4px; }
-
-        .job ul     { padding-left: 14px; }
-        .job li     { font-size: 9pt; color: var(--text-700); margin-bottom: 2px; line-height: 1.45; }
-        .job li::marker { color: var(--accent); }
-
-        /* ══════════════════════════════════════
-           PUBLICATIONS — card style
-        ══════════════════════════════════════ */
-        .pub-cards { display: flex; flex-direction: column; gap: 9px; }
-
-        /* text-only pub (first one keeps old styling) */
-        .pub-text { font-size: 9pt; color: var(--text-700); line-height: 1.5; }
-        .pub-text .pub-t  { font-weight: 700; color: var(--text-900); }
-        .pub-text .pub-m  { color: var(--text-500); font-size: 8.5pt; }
-        .pub-text a {
-            font-family: var(--mono);
-            font-size: 8pt;
-            color: var(--accent);
-            text-decoration: none;
-            border-bottom: 1px dashed var(--accent);
+        .experience-title {
+            font-weight: 700;
+            font-size: 14px;
+            color: #111827;
         }
-        .pub-text a:hover { border-bottom-style: solid; }
-
-        /* clickable SSRN cards */
-        .pub-card-link {
+        .experience-date {
+            color: #6b7280;
+            font-size: 12px;
+            font-family: 'Fira Code', monospace;
+        }
+        .experience-company {
+            color: #2563eb;
+            font-style: italic;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .ssrn-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
             display: flex;
-            align-items: stretch;
-            gap: 0;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            overflow: hidden;
-            text-decoration: none;
-            color: inherit;
-            transition: box-shadow .18s, border-color .18s;
-            background: #fff;
+            padding: 14px;
+            margin-bottom: 12px;
+            background-color: #fafafa;
         }
-        .pub-card-link:hover {
-            border-color: var(--accent);
-            box-shadow: 0 2px 12px rgba(26,86,219,.13);
-        }
-
-        .pub-card-thumb {
-            width: 90px;
-            flex-shrink: 0;
-            background: var(--accent-soft);
+        .ssrn-icon {
+            width: 70px;
+            text-align: center;
+            border-right: 1px solid #e5e7eb;
+            padding-right: 14px;
+            margin-right: 14px;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            gap: 5px;
-            padding: 10px 8px;
-            border-right: 1px solid var(--border-light);
+            align-items: center;
         }
-        .pub-card-thumb .ssrn-logo {
-            font-family: var(--mono);
-            font-size: 8.5pt;
+        .ssrn-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: #cbd5e1;
+        }
+        .ssrn-icon-text {
             font-weight: 700;
-            color: var(--accent);
-            letter-spacing: 1px;
-        }
-        .pub-card-thumb .ssrn-icon {
-            font-size: 20pt;
-            line-height: 1;
-        }
-        .pub-card-thumb .ssrn-label {
-            font-size: 7pt;
-            color: var(--text-500);
-            text-align: center;
-            line-height: 1.3;
-        }
-
-        .pub-card-body {
-            padding: 9px 12px;
-            flex: 1;
-        }
-        .pub-card-body .pct { font-size: 9.2pt; font-weight: 700; color: var(--text-900); line-height: 1.35; }
-        .pub-card-body .pcm { font-size: 8.2pt; color: var(--text-500); margin: 2px 0 4px; }
-        .pub-card-body .pcd { font-size: 8.8pt; color: var(--text-700); line-height: 1.45; }
-        .pub-card-body .pcu {
-            display: inline-block;
-            margin-top: 4px;
-            font-family: var(--mono);
-            font-size: 7.5pt;
-            color: var(--accent);
-        }
-
-        /* ══════════════════════════════════════
-           PROJECTS
-        ══════════════════════════════════════ */
-        .project { margin-bottom: 9px; }
-        .project + .project { border-top: 1px solid var(--border-light); padding-top: 8px; }
-
-        .proj-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-bottom: 2px;
-        }
-        .proj-name { font-size: 9.8pt; font-weight: 700; color: var(--text-900); }
-        .proj-name a { color: var(--text-900); text-decoration: none; border-bottom: 1px dashed transparent; }
-        .proj-name a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-        .proj-stack {
-            font-size: 7.8pt;
-            font-family: var(--mono);
-            color: var(--text-500);
-            background: var(--bg-card);
-            border: 1px solid var(--border-light);
-            border-radius: 3px;
-            padding: 1px 6px;
-        }
-        .project ul  { padding-left: 14px; }
-        .project li  { font-size: 9pt; color: var(--text-700); margin-bottom: 2px; line-height: 1.45; }
-        .project li::marker { color: var(--accent); }
-
-        .more-repos {
+            font-size: 12px;
             margin-top: 6px;
-            font-size: 9pt;
-            color: var(--text-700);
+            color: #3b82f6;
         }
-        .more-repos a {
-            color: var(--accent);
+        .ssrn-date {
+            font-size: 9px;
+            color: #6b7280;
+            text-align: center;
+            margin-top: 4px;
+            line-height: 1.2;
+        }
+        .ssrn-content h4 {
+            margin: 0 0 4px 0;
+            font-size: 14px;
+            color: #111827;
+            font-weight: 700;
+        }
+        .ssrn-meta {
+            font-size: 11px;
+            color: #6b7280;
+            margin-bottom: 6px;
+        }
+        .ssrn-desc {
+            font-size: 12px;
+            color: #374151;
+            margin-bottom: 6px;
+        }
+        .ssrn-link {
+            font-size: 11px;
+            color: #3b82f6;
             text-decoration: none;
-            font-weight: 600;
-            border-bottom: 1px solid var(--accent);
+            display: inline-flex;
+            align-items: center;
         }
-        .more-repos a:hover { border-bottom-width: 2px; }
+        .ssrn-link::after {
+            content: '↗';
+            margin-left: 4px;
+        }
 
-        /* ══════════════════════════════════════
-           EDUCATION
-        ══════════════════════════════════════ */
-        .edu-row {
+        .project-item { margin-bottom: 16px; }
+        .project-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        .project-title {
+            font-weight: 700;
+            font-size: 14px;
+            color: #111827;
+        }
+        .tags {
+            display: flex;
+            gap: 6px;
             flex-wrap: wrap;
-            gap: 4px;
-            margin-bottom: 4px;
         }
-        .edu-deg  { font-weight: 600; font-size: 9.4pt; color: var(--text-900); }
-        .edu-inst { font-size: 9pt; color: var(--text-700); font-style: italic; }
-        .certs    { font-size: 9pt; color: var(--text-700); margin-top: 5px; line-height: 1.6; }
-
-        /* ══════════════════════════════════════
-           FOOTER
-        ══════════════════════════════════════ */
-        .resume-footer {
-            margin-top: 12px;
-            padding-top: 8px;
-            border-top: 1px solid var(--border-light);
-            display: flex;
-            justify-content: space-between;
-            font-size: 7.8pt;
-            color: var(--text-400);
+        .tag {
+            background-color: #f3f4f6;
+            color: #4b5563;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-family: 'Fira Code', monospace;
+            border: 1px solid #e5e7eb;
         }
-        .resume-footer a { color: var(--accent); text-decoration: none; }
-        .resume-footer a:hover { text-decoration: underline; }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
-<!-- Print / Download button (web only) -->
-<button class="print-btn no-print" onclick="window.print()">🖨️ Save as PDF</button>
-
-<div class="resume">
-
-    <!-- ══ HEADER ══ -->
-    <div class="header">
-        <div>
-            <div class="header-name">Shashank Kumar</div>
-            <div class="header-title">AI Systems Engineer &nbsp;|&nbsp; Multi-Agent Systems &nbsp;·&nbsp; LLM Pipelines &nbsp;·&nbsp; Distributed AI</div>
+<div class="resume-container">
+    
+    <header>
+        <div class="header-left">
+            <h1>Shashank Kumar</h1>
+            <p>Independent AI Researcher & Full Stack Engineer | Multi-Agent Systems · Distributed AI</p>
         </div>
-        <div class="header-contacts">
-            <div>Delhi NCR, India</div>
-            <div><a href="mailto:shashankchoudhary792@gmail.com">shashankchoudhary792@gmail.com</a></div>
-            <div><a href="https://github.com/sidthebuilder" target="_blank" rel="noopener">github.com/sidthebuilder</a></div>
-            <div><a href="https://linkedin.com/in/shashank-kumar-772a2035b" target="_blank" rel="noopener">linkedin.com/in/shashank-kumar-772a2035b</a></div>
+        <div class="header-right">
+            Delhi NCR, India<br>
+            shashankchoudhary792@gmail.com<br>
+            <a href="https://github.com/sidthebuilder">github.com/sidthebuilder</a><br>
+            <a href="https://linkedin.com/in/shashank-kumar-772a2035b">linkedin.com/in/shashank-kumar-772a2035b</a>
+        </div>
+    </header>
+
+    <div class="section-title">Professional Summary</div>
+    <p>AI engineer with 4+ years building production-grade systems across multi-agent orchestration, LLM pipelines, and distributed AI infrastructure. Architected CELLHAWK, a 20-module GPS-denied autonomous navigation platform. Published researcher on FSM-based agent architecture, FHE ephemeral agents, and enterprise AI reasoning systems (SSRN). Top 5% evaluator across 1,000+ adversarial red-team tasks.</p>
+
+    <div class="section-title">Key Achievements</div>
+    <ul class="blue-bullet achievements-grid">
+        <li>Top 5% AI evaluator across 1,000+ adversarial tasks (Outlier, Alignerr)</li>
+        <li>32% RMSE reduction vs single-agent LLMs — 50 benchmark study; 94% compilation rate vs 42% baseline</li>
+        <li>500+ red-team prompts — improved frontier LLM safety scores by 25%</li>
+        <li>Security audit: uncovered PCI violations & password exposure in production codebase</li>
+        <li>30+ systems delivered — RAG pipelines, LLM apps, full-stack platforms (4.8/5 rating)</li>
+    </ul>
+
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+        <strong>Languages:</strong>
+        <div>Python, TypeScript, JavaScript, C#, SQL, Bash</div>
+        
+        <strong>AI / ML:</strong>
+        <div>Multi-Agent Orchestration (FSM/DAG), RAG Pipelines, FHE (TFHE-rs), Formal Verification (Z3), LLM Fine-Tuning (LoRA, DPO), RLHF, YOLOv9, PPO/RL, NVIDIA Isaac Sim</div>
+        
+        <strong>Backend:</strong>
+        <div>FastAPI, Node.js, Express, gRPC, PostgreSQL, TimescaleDB, Redis, MongoDB, RESTful APIs</div>
+        
+        <strong>Frontend:</strong>
+        <div>Next.js 14, React, Tailwind CSS, HTML5, CSS3</div>
+        
+        <strong>Infrastructure:</strong>
+        <div>Docker, GitHub Actions, AWS, Prometheus, Grafana, n8n, Hugging Face, OpenAI API, Anthropic API</div>
+        
+        <strong>Security:</strong>
+        <div>AES-256-GCM, mTLS, JWT, HMAC-SHA256, PCI Auditing</div>
+    </div>
+
+    <div class="section-title">Professional Experience</div>
+    
+    <div class="experience-item">
+        <div class="experience-header">
+            <div class="experience-title">Full Stack AI Engineer</div>
+            <div class="experience-date">Jan 2026 – Present</div>
+        </div>
+        <div class="experience-company">Bitnorm</div>
+        <ul class="blue-bullet">
+            <li>Conducted security audit of production codebase; identified password exposure risks and PCI compliance gaps prior to deployment.</li>
+            <li>Contributed to early-stage integration of LLM-powered features in production systems.</li>
+            <li>Collaborated with engineering team on security best practices and architecture decisions.</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <div class="experience-header">
+            <div class="experience-title">AI Model Evaluation Specialist</div>
+            <div class="experience-date">Jun 2024 – Present</div>
+        </div>
+        <div class="experience-company">Outlier · Alignerr · OneForma | Remote</div>
+        <ul class="blue-bullet">
+            <li>Rated Top 5% performer across 1,000+ complex evaluation tasks; built 500+ adversarial red-team prompts improving frontier LLM safety scores by 25%.</li>
+            <li>Evaluated 3+ pre-release LLMs on factual accuracy, logical coherence, and instruction-following before production launch.</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <div class="experience-header">
+            <div class="experience-title">Freelance AI & Systems Developer</div>
+            <div class="experience-date">Mar 2021 – May 2024</div>
+        </div>
+        <div class="experience-company">Fiverr · Upwork & Direct Clients | Remote — Full-time independent engineer</div>
+        <ul class="blue-bullet">
+            <li>Delivered 30+ production systems across finance, healthcare, and SaaS — custom RAG agents improving answer accuracy by 60% and reducing manual processing by 40%.</li>
+            <li>Maintained 4.8/5 platform rating with consistent 5-star reviews across full-stack AI engagements.</li>
+        </ul>
+    </div>
+
+    <div class="section-title">Publications</div>
+    <p><strong>"Beyond Single Prompts: Engineering a Multi-Agent Workgroup for End-to-End Tabular Data Science"</strong> — Technical Report (Preprint), March 2026. 3-agent FSM orchestrator with adversarial debate loop; <strong>32% RMSE reduction</strong>, 94% compilation rate vs 42% for single-shot LLMs across 50 benchmarks.<br>
+    <a href="https://sidthebuilder.github.io/AutoML-Agent-Orchestrator" style="font-size: 11px;">sidthebuilder.github.io/AutoML-Agent-Orchestrator</a></p>
+
+    <!-- PROJECT CHRONOS SSRN BLOCK -->
+    <div class="ssrn-card">
+        <div class="ssrn-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <div class="ssrn-icon-text">SSRN</div>
+            <div class="ssrn-date">Peer-Reviewed<br>Preprint · Jun<br>2026</div>
+        </div>
+        <div class="ssrn-content">
+            <h4>Project CHRONOS: A Fully Homomorphic Ephemeral AI Agent</h4>
+            <div class="ssrn-meta">Shashank Kumar · SSRN Abstract 6950898 · June 2026 · Status: Distributed</div>
+            <div class="ssrn-desc">Presents CHRONOS, the first autonomous AI agent that achieves plaintext blindness (via TFHE) and cryptographically enforced time-to-live via Proof of Sequential Work (PoSW).</div>
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6950898" class="ssrn-link">papers.ssrn.com/sol3/papers.cfm?abstract_id=6950898</a>
         </div>
     </div>
 
-    <!-- ══ PROFESSIONAL SUMMARY ══ -->
-    <div class="section">
-        <div class="section-title">Professional Summary</div>
-        <p class="summary">
-            AI engineer with 4+ years building production-grade systems across multi-agent orchestration, LLM pipelines, and distributed AI infrastructure. Architected CELLHAWK, a 20-module GPS-denied autonomous navigation platform. Published researcher on FSM-based agent architecture and enterprise AI reasoning systems (SSRN). Top 5% evaluator across 1,000+ adversarial red-team tasks.
-        </p>
-    </div>
-
-    <!-- ══ KEY ACHIEVEMENTS ══ -->
-    <div class="section">
-        <div class="section-title">Key Achievements</div>
-        <div class="achievements-grid">
-            <div class="ach-item">Top 5% AI evaluator across 1,000+ adversarial tasks (Outlier, Alignerr)</div>
-            <div class="ach-item">32% RMSE reduction vs single-agent LLMs — 50 benchmark study; 94% compilation rate vs 42% baseline</div>
-            <div class="ach-item">500+ red-team prompts — improved frontier LLM safety scores by 25%</div>
-            <div class="ach-item">Security audit: uncovered PCI violations &amp; password exposure in production codebase</div>
-            <div class="ach-item">30+ systems delivered — RAG pipelines, LLM apps, full-stack platforms (4.8/5 rating)</div>
+    <!-- PAAC SSRN BLOCK -->
+    <div class="ssrn-card">
+        <div class="ssrn-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <div class="ssrn-icon-text">SSRN</div>
+            <div class="ssrn-date">Peer-Reviewed<br>Preprint · Jun<br>2026</div>
+        </div>
+        <div class="ssrn-content">
+            <h4>The Provably Aligned AI Core: A Deterministic Safety Wrapper</h4>
+            <div class="ssrn-meta">Shashank Kumar · SSRN Abstract 6879218 · June 2026 · Status: Distributed</div>
+            <div class="ssrn-desc">Proposes a neurosymbolic safety wrapper utilizing Z3 SMT solvers to formally verify and guarantee the alignment of recursively self-improving AI agents prior to execution.</div>
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6879218" class="ssrn-link">papers.ssrn.com/sol3/papers.cfm?abstract_id=6879218</a>
         </div>
     </div>
 
-    <!-- ══ TECHNICAL SKILLS ══ -->
-    <div class="section">
-        <div class="section-title">Technical Skills</div>
-        <div class="skills-table">
-            <span class="sk-label">Languages:</span>
-            <span class="sk-value">Python, TypeScript, JavaScript, C#, SQL, Bash</span>
-
-            <span class="sk-label">AI / ML:</span>
-            <span class="sk-value">Multi-Agent Orchestration (FSM/DAG), RAG Pipelines, LLM Fine-Tuning (LoRA, DPO), RLHF, Adversarial Red-Teaming, YOLOv9, PPO/RL (Stable-Baselines3), NVIDIA Isaac Sim</span>
-
-            <span class="sk-label">Backend:</span>
-            <span class="sk-value">FastAPI, Node.js, Express, gRPC, PostgreSQL, TimescaleDB, Redis, MongoDB, RESTful APIs</span>
-
-            <span class="sk-label">Frontend:</span>
-            <span class="sk-value">Next.js 14, React, Tailwind CSS, HTML5, CSS3</span>
-
-            <span class="sk-label">Infrastructure:</span>
-            <span class="sk-value">Docker, GitHub Actions, AWS, Prometheus, Grafana, n8n, Hugging Face, OpenAI API, Anthropic API</span>
-
-            <span class="sk-label">Security:</span>
-            <span class="sk-value">AES-256-GCM, mTLS, JWT, HMAC-SHA256, PCI Auditing</span>
+    <!-- ZERO-TRAINING SSRN BLOCK -->
+    <div class="ssrn-card">
+        <div class="ssrn-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <div class="ssrn-icon-text">SSRN</div>
+            <div class="ssrn-date">Peer-Reviewed<br>Preprint · May<br>2026</div>
+        </div>
+        <div class="ssrn-content">
+            <h4>The Zero-Training Enterprise Brain: A Live Semantic Reasoning Architecture</h4>
+            <div class="ssrn-meta">Shashank Kumar · SSRN Abstract 6842778 · May 2026 · Status: Distributed</div>
+            <div class="ssrn-desc">Proposes a live semantic reasoning architecture that eliminates model retraining overhead for organisational AI — enabling real-time, training-free intelligence.</div>
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6842778" class="ssrn-link">papers.ssrn.com/sol3/papers.cfm?abstract_id=6842778</a>
         </div>
     </div>
 
-    <!-- ══ PROFESSIONAL EXPERIENCE ══ -->
-    <div class="section">
-        <div class="section-title">Professional Experience</div>
-
-        <div class="job">
-            <div class="job-top">
-                <span class="job-title">Full Stack AI Engineer</span>
-                <span class="job-date">Jan 2026 – Present</span>
-            </div>
-            <div class="job-org">Bitnorm</div>
-            <ul>
-                <li>Conducted security audit of production codebase; identified password exposure risks and PCI compliance gaps prior to deployment.</li>
-                <li>Contributed to early-stage integration of LLM-powered features in production systems.</li>
-                <li>Collaborated with engineering team on security best practices and architecture decisions.</li>
-            </ul>
+    <!-- EPISTEMIC SSRN BLOCK -->
+    <div class="ssrn-card">
+        <div class="ssrn-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <div class="ssrn-icon-text">SSRN</div>
+            <div class="ssrn-date">Peer-Reviewed<br>Preprint · Apr<br>2026</div>
         </div>
-
-        <div class="job">
-            <div class="job-top">
-                <span class="job-title">AI Model Evaluation Specialist</span>
-                <span class="job-date">Jun 2024 – Present</span>
-            </div>
-            <div class="job-org">Outlier · Alignerr · OneForma &nbsp;|&nbsp; Remote</div>
-            <ul>
-                <li>Rated Top 5% performer across 1,000+ complex evaluation tasks; built 500+ adversarial red-team prompts improving frontier LLM safety scores by 25%.</li>
-                <li>Evaluated 3+ pre-release LLMs on factual accuracy, logical coherence, and instruction-following before production launch.</li>
-            </ul>
-        </div>
-
-        <div class="job">
-            <div class="job-top">
-                <span class="job-title">Freelance AI &amp; Systems Developer</span>
-                <span class="job-date">Mar 2021 – May 2024</span>
-            </div>
-            <div class="job-org">Fiverr · Upwork &amp; Direct Clients &nbsp;|&nbsp; Remote — Full-time independent engineer</div>
-            <ul>
-                <li>Delivered 30+ production systems across finance, healthcare, and SaaS — custom RAG agents improving answer accuracy by 60% and reducing manual processing by 40%.</li>
-                <li>Maintained 4.8/5 platform rating with consistent 5-star reviews across full-stack AI engagements.</li>
-            </ul>
+        <div class="ssrn-content">
+            <h4>Building Epistemic Infrastructure for Enterprise AI Search</h4>
+            <div class="ssrn-meta">Shashank Kumar · SSRN Abstract 6585978 · April 2026 · Status: Distributed</div>
+            <div class="ssrn-desc">Argues that enterprise AI search requires epistemic infrastructure beyond retrieval — introducing structured reasoning layers to address fundamental RAG failure modes.</div>
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6585978" class="ssrn-link">papers.ssrn.com/sol3/papers.cfm?abstract_id=6585978</a>
         </div>
     </div>
 
-    <!-- ══ PUBLICATIONS ══ -->
-    <div class="section">
-        <div class="section-title">Publications</div>
-        <div class="pub-cards">
-
-            <!-- Paper 1: GitHub / preprint -->
-            <div class="pub-text">
-                <span class="pub-t">"Beyond Single Prompts: Engineering a Multi-Agent Workgroup for End-to-End Tabular Data Science"</span>
-                <span class="pub-m"> — Technical Report (Preprint), March 2026.</span>
-                3-agent FSM orchestrator with adversarial debate loop; <strong>32% RMSE reduction</strong>, 94% compilation rate vs 42% for single-shot LLMs across 50 benchmarks.<br>
-                <a href="https://sidthebuilder.github.io/AutoML-Agent-Orchestrator/" target="_blank" rel="noopener">sidthebuilder.github.io/AutoML-Agent-Orchestrator</a>
+    <div class="section-title">Key Projects</div>
+    
+    <div class="project-item">
+        <div class="project-header">
+            <div class="project-title">CELLHAWK — Autonomous Aircraft Navigation Platform</div>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">gRPC</span>
+                <span class="tag">Docker</span>
+                <span class="tag">TimescaleDB</span>
+                <span class="tag">Redis</span>
+                <span class="tag">YOLOv9</span>
+                <span class="tag">PPO/RL</span>
             </div>
-
-            <!-- Paper 2: SSRN card -->
-            <a class="pub-card-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6842778" target="_blank" rel="noopener">
-                <div class="pub-card-thumb">
-                    <div class="ssrn-icon">📄</div>
-                    <div class="ssrn-logo">SSRN</div>
-                    <div class="ssrn-label">Peer-Reviewed Preprint · May 2026</div>
-                </div>
-                <div class="pub-card-body">
-                    <div class="pct">The Zero-Training Enterprise Brain: A Live Semantic Reasoning Architecture for Training-Free Organizational Intelligence</div>
-                    <div class="pcm">Shashank Kumar &nbsp;·&nbsp; SSRN Abstract 6842778 &nbsp;·&nbsp; May 2026 &nbsp;·&nbsp; Status: Distributed</div>
-                    <div class="pcd">Proposes a live semantic reasoning architecture that eliminates model retraining overhead for organisational AI — enabling real-time, training-free intelligence across enterprise knowledge graphs.</div>
-                    <div class="pcu">papers.ssrn.com/sol3/papers.cfm?abstract_id=6842778 ↗</div>
-                </div>
-            </a>
-
-            <!-- Paper 3: SSRN card -->
-            <a class="pub-card-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6585978" target="_blank" rel="noopener">
-                <div class="pub-card-thumb">
-                    <div class="ssrn-icon">📄</div>
-                    <div class="ssrn-logo">SSRN</div>
-                    <div class="ssrn-label">Peer-Reviewed Preprint · Apr 2026</div>
-                </div>
-                <div class="pub-card-body">
-                    <div class="pct">Building Epistemic Infrastructure for Enterprise AI Search: Why Retrieval Is Not Enough</div>
-                    <div class="pcm">Shashank Kumar &nbsp;·&nbsp; SSRN Abstract 6585978 &nbsp;·&nbsp; April 2026 &nbsp;·&nbsp; Status: Distributed</div>
-                    <div class="pcd">Argues that enterprise AI search requires epistemic infrastructure beyond retrieval — introducing structured reasoning layers and knowledge-quality signals to address fundamental RAG failure modes.</div>
-                    <div class="pcu">papers.ssrn.com/sol3/papers.cfm?abstract_id=6585978 ↗</div>
-                </div>
-            </a>
-
         </div>
+        <ul class="blue-bullet">
+            <li>GPS-denied nav stack using RSSI multilateration + EKF over India's 700k+ cell towers; 50–150 m accuracy in dense urban corridors, zero additional hardware required.</li>
+            <li>Swarm orchestrator for 1,000+ drone fleet; edge AI at 10 Hz (YOLOv9 + MiDaS); AES-256-GCM fleet vault; 3D voxel path planner + A* replanning on Jetson Nano.</li>
+            <li>Architecture validated in full software simulation (JSBSim flight dynamics + synthetic cellular dataset); hardware integration in progress.</li>
+        </ul>
     </div>
 
-    <!-- ══ KEY PROJECTS ══ -->
-    <div class="section">
-        <div class="section-title">Key Projects</div>
-
-        <div class="project">
-            <div class="proj-top">
-                <span class="proj-name">CELLHAWK — Autonomous Aircraft Navigation Platform</span>
-                <span class="proj-stack">Python · FastAPI · gRPC · Docker · TimescaleDB · Redis · YOLOv9 · PPO/RL</span>
+    <div class="project-item">
+        <div class="project-header">
+            <div class="project-title">Verdant AI — Multi-Agent Task Routing System</div>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Llama 3 (LoRA)</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Celery</span>
             </div>
-            <ul>
-                <li>GPS-denied nav stack using RSSI multilateration + EKF over India's 700k+ cell towers; 50–150 m accuracy in dense urban corridors, zero additional hardware required.</li>
-                <li>Swarm orchestrator for 1,000+ drone fleet; edge AI at 10 Hz (YOLOv9 + MiDaS); AES-256-GCM fleet vault; 3D voxel path planner + A* replanning on Jetson Nano.</li>
-                <li>Architecture validated in full software simulation (JSBSim flight dynamics + synthetic cellular dataset); hardware integration in progress.</li>
-            </ul>
         </div>
-
-        <div class="project">
-            <div class="proj-top">
-                <span class="proj-name">Verdant AI — Multi-Agent Task Routing System</span>
-                <span class="proj-stack">Python · FastAPI · Llama 3 (LoRA) · Docker · Celery</span>
-            </div>
-            <ul>
-                <li>7-agent Router-Delegate architecture solving coding and physics problems; 85% success rate, 70% faster task completion vs single-agent baseline.</li>
-                <li>Unified adapter layer running LoRA fine-tuned Llama 3 + GPT-4; handled 100+ concurrent simulations without degradation.</li>
-            </ul>
-        </div>
-
-        <div class="project">
-            <div class="proj-top">
-                <span class="proj-name">QuasiQ — Quantum-Inspired Distributed Optimizer</span>
-                <span class="proj-stack">Python · FastAPI · Celery · Redis · React · Docker</span>
-            </div>
-            <ul>
-                <li>Distributed Genetic Algorithm + Simulated Annealing solver for NP-hard problems; real-time 3D dashboard, fully containerised with CI/CD pipeline.</li>
-            </ul>
-        </div>
-
-        <div class="project">
-            <div class="proj-top">
-                <span class="proj-name">Solar Phantom — Perpetual Flight UAV Optimization</span>
-                <span class="proj-stack">Python · AeroSandbox · Non-Linear Optimization</span>
-            </div>
-            <ul>
-                <li>High-fidelity MDO framework solving perpetual solar UAV flight; technology feasibility maps and 365-day survival window analysis across global corridors.</li>
-            </ul>
-        </div>
-
-        <div class="more-repos">
-            <strong>+ 20 additional open-source repositories</strong> &mdash;
-            <a href="https://github.com/sidthebuilder" target="_blank" rel="noopener">github.com/sidthebuilder</a>
-            <br>
-            GMX TradeDesk (DeFi / Arbitrum L2) · NeuroSim Engine (AI character simulation, Unity) · HDFS Failure Prediction · MTD System (cybersecurity) · EcoTwin/EcoNode (IoT) · NVIDIA Isaac Sim · 10+ full-stack TypeScript web applications.
-        </div>
+        <ul class="blue-bullet">
+            <li>7-agent Router-Delegate architecture solving coding and physics problems; 85% success rate, 70% faster task completion vs single-agent baseline.</li>
+            <li>Unified adapter layer running LoRA fine-tuned Llama 3 + GPT-4; handled 100+ concurrent simulations without degradation.</li>
+        </ul>
     </div>
 
-    <!-- ══ EDUCATION & CERTIFICATIONS ══ -->
-    <div class="section">
-        <div class="section-title">Education &amp; Certifications</div>
-
-        <div class="edu-row">
-            <div>
-                <span class="edu-deg">B.Sc. Computer Science</span>
-                <span class="edu-inst"> &nbsp;—&nbsp; University of the People</span>
-            </div>
-            <span style="font-size:8.4pt;color:var(--text-500);font-family:var(--mono)">In Progress</span>
-        </div>
-
-        <div class="edu-row">
-            <div>
-                <span class="edu-deg">Bachelor of Arts</span>
-                <span class="edu-inst"> &nbsp;—&nbsp; Ch. Charan Singh University, Meerut</span>
+    <div class="project-item">
+        <div class="project-header">
+            <div class="project-title">QuasiQ — Quantum-Inspired Distributed Optimizer</div>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Celery</span>
+                <span class="tag">Redis</span>
+                <span class="tag">React</span>
+                <span class="tag">Docker</span>
             </div>
         </div>
-
-        <div class="certs">
-            <strong>Certifications:</strong> Scale AI Annotation Specialist &nbsp;·&nbsp; CS50: Introduction to Computer Science (In Progress)<br>
-            <strong>Languages:</strong> English (Fluent) &nbsp;·&nbsp; Hindi (Native)
-        </div>
+        <ul class="blue-bullet">
+            <li>Distributed Genetic Algorithm + Simulated Annealing solver for NP-hard problems; real-time 3D dashboard, fully containerised with CI/CD pipeline.</li>
+        </ul>
     </div>
 
-    <!-- ══ FOOTER ══ -->
-    <div class="resume-footer">
-        <span>References &amp; project demos available upon request</span>
-        <span>
-            <a href="https://github.com/sidthebuilder" target="_blank" rel="noopener">github.com/sidthebuilder</a>
-            &nbsp;·&nbsp;
-            <a href="https://linkedin.com/in/shashank-kumar-772a2035b" target="_blank" rel="noopener">LinkedIn</a>
-        </span>
-        <span>Updated June 2026</span>
+    <div class="project-item">
+        <div class="project-header">
+            <div class="project-title">Solar Phantom — Perpetual Flight UAV Optimization</div>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">AeroSandbox</span>
+                <span class="tag">Non-Linear Opt</span>
+            </div>
+        </div>
+        <ul class="blue-bullet">
+            <li>High-fidelity MDO framework solving perpetual solar UAV flight; technology feasibility maps and 365-day survival window analysis across global corridors.</li>
+        </ul>
+    </div>
+
+    <p style="color: #4b5563; font-size: 11px;"><strong>+ 20 additional open-source repositories — <a href="https://github.com/sidthebuilder">github.com/sidthebuilder</a></strong><br>
+    GMX TradeDesk (DeFi / Arbitrum L2) · NeuroSim Engine (AI character simulation, Unity) · HDFS Failure Prediction · MTD System (cybersecurity) · EcoTwin/EcoNode (IoT) · NVIDIA Isaac Sim · 10+ full-stack TypeScript web applications.</p>
+
+    <div class="section-title">Education & Certifications</div>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+        <div><strong>B.Sc. Computer Science</strong> — <span style="font-style: italic; color: #4b5563;">University of the People</span></div>
+        <div style="font-family: 'Fira Code', monospace; color: #6b7280;">In Progress</div>
+    </div>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+        <div><strong>Bachelor of Arts</strong> — <span style="font-style: italic; color: #4b5563;">Ch. Charan Singh University, Meerut</span></div>
+    </div>
+    
+    <p style="font-size: 11px; color: #4b5563;">
+        <strong>Certifications:</strong> Scale AI Annotation Specialist · CS50: Introduction to Computer Science (In Progress)<br>
+        <strong>Languages:</strong> English (Fluent) · Hindi (Native)
+    </p>
+
+    <div style="text-align: center; margin-top: 40px; font-size: 10px; color: #9ca3af;">
+        References & project demos available upon request<br>
+        github.com/sidthebuilder · LinkedIn<br>
+        Updated June 2026
     </div>
 
 </div>
