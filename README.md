@@ -15,8 +15,3 @@ Personal site and CV for Shashank Kumar, hosted on GitHub Pages at
 - Google Scholar: [profile](https://scholar.google.com/citations?user=ydi_lA4AAAAJ)
 - ORCID: [0009-0001-7379-955X](https://orcid.org/0009-0001-7379-955X)
 
-## Editing
-
-The PDF is generated from LaTeX source kept outside this repository. When the CV changes,
-rebuild the PDF, copy it here as `Shashank-Kumar-CV.pdf`, and update `index.html` to match so
-the two never disagree.
