@@ -192,8 +192,9 @@
     <header>
         <div class="header-left">
             <h1>Shashank Kumar</h1>
-            <p>Full-Stack \& Applied AI Engineer | AI Safety | LLM Systems</p>
-            <a class="download" href="Shashank-Kumar-CV.pdf">Download CV (PDF)</a>
+            <p>Full-Stack &amp; Applied AI Engineer | AI Safety | LLM Systems</p>
+            <a class="download" href="Shashank_Kumar_Resume.pdf">Download Resume (PDF)</a>
+            <a class="download" href="Shashank_Kumar_Research_CV.pdf" style="background-color: #4b5563; margin-left: 6px;">Download CV (PDF)</a>
         </div>
         <div class="header-right">
             Delhi NCR, India<br>
@@ -227,7 +228,7 @@
         <div>Groth16 zk-SNARKs (arkworks), Poseidon hash, verifiable delay functions, BLS12-381, ML-DSA, AES-256-GCM, authenticated encryption</div>
 
         <strong>AI / ML:</strong>
-        <div>Multi-agent orchestration (FSM/DAG), RAG pipelines, LLM fine-tuning (LoRA, DPO), RLHF, adversarial red-teaming, FHE inference (TFHE-rs), formal verification (Z3 SMT), YOLOv9, PPO/RL, NVIDIA Isaac Sim</div>
+        <div>Multi-agent orchestration (FSM/DAG), RAG pipelines, prompt engineering, LLM fine-tuning (LoRA, DPO), RLHF, adversarial red-teaming, formal verification (Z3 SMT), graph-based agent analysis (FalkorDB)</div>
 
         <strong>Backend:</strong>
         <div>FastAPI, Node.js, Express, GraphQL, gRPC, PostgreSQL, pgvector, TimescaleDB, Redis, MongoDB, REST APIs</div>
@@ -236,7 +237,7 @@
         <div>Next.js, React, Tailwind CSS, HTML5, CSS3</div>
 
         <strong>Infrastructure:</strong>
-        <div>Docker, GitHub Actions, Ansible, AWS, Azure, Prometheus, Grafana, Hugging Face, OpenAI and Anthropic APIs</div>
+        <div>Docker, GitLab CI/CD, GitHub Actions, Ansible, AWS, Azure, Prometheus, Grafana, Hugging Face, OpenAI and Anthropic APIs</div>
 
         <strong>Security:</strong>
         <div>PCI-DSS auditing, threat modelling, mTLS, JWT, HMAC-SHA256, secrets management</div>
@@ -344,16 +345,30 @@
 
     <div class="project-item">
         <div class="project-header">
-            <div class="project-title">CellHawk &mdash; GPS-Denied Navigation Research Stack</div>
+            <div class="project-title">Swarmchaser &mdash; Coordinated AI Agent Detection</div>
             <div class="tags">
                 <span class="tag">Python</span>
-                <span class="tag">C++</span>
-                <span class="tag">EKF</span>
+                <span class="tag">MinHash</span>
             </div>
         </div>
         <ul class="blue-bullet">
-            <li>Position estimation from ambient cellular signal strength via RSSI multilateration fused through an Extended Kalman Filter, requiring no additional hardware; swarm coordination layer and 3D voxel path planner with A* replanning.</li>
-            <li><span class="caveat">Simulation only:</span> validated against JSBSim flight dynamics and a synthetic cellular dataset. No hardware flight testing performed.</li>
+            <li>Detects coordinated swarms of AI agents from public post data using key extraction, MinHash paraphrase clustering, and statistical steering tests. Identified 119 swarms across 125,885 posts from the Moltbook Observatory Archive. <strong>Open source.</strong></li>
+            <li><a href="https://github.com/sidthebuilder/swarmchaser">github.com/sidthebuilder/swarmchaser</a></li>
+        </ul>
+    </div>
+
+    <div class="project-item">
+        <div class="project-header">
+            <div class="project-title">Provenant &mdash; Agent Swarm Detection and Block-Replay Engine</div>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">FalkorDB</span>
+                <span class="tag">Graph Hacks</span>
+            </div>
+        </div>
+        <ul class="blue-bullet">
+            <li>Graph-based detection and &ldquo;what-if&rdquo; replay for coordinated AI agent swarms. Detected 117 swarms across 125,885 posts in 7&nbsp;s; block replay forks the graph to measure collateral before applying a ban. Shared-memory benchmark on 180k+ real AI Village messages achieved 52.3% recall@20. <strong>16 tests pass.</strong></li>
+            <li><a href="https://github.com/sidthebuilder/provenant">github.com/sidthebuilder/provenant</a></li>
         </ul>
     </div>
 
@@ -368,20 +383,6 @@
         <ul class="blue-bullet">
             <li>Ten-plus module library implementing RRT*, A*, LQR, MPC, MPPI, EKF, UKF, particle filter, pose-graph SLAM, and a policy-gradient agent with a pure-NumPy neural network. <span class="caveat">Simulation only;</span> tests cover simulation, perception, and control.</li>
             <li><a href="https://github.com/sidthebuilder/PyRobotics">github.com/sidthebuilder/PyRobotics</a></li>
-        </ul>
-    </div>
-
-    <div class="project-item">
-        <div class="project-header">
-            <div class="project-title">Epistemic Infrastructure and Solar Phantom</div>
-            <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">AeroSandbox</span>
-            </div>
-        </div>
-        <ul class="blue-bullet">
-            <li><strong>Epistemic Infrastructure:</strong> structured reasoning layer addressing retrieval-augmented generation failure modes that ranking improvements alone do not fix, with replayable traces.</li>
-            <li><strong>Solar Phantom:</strong> multidisciplinary design optimisation solving for solar-UAV geometry that closes a 24-hour energy balance; latitude feasibility maps and day-of-year survival windows. Physics via AeroSandbox; <span class="caveat">not yet validated against a reference aircraft.</span></li>
         </ul>
     </div>
 
@@ -452,7 +453,7 @@
         <a href="https://github.com/sidthebuilder" style="color: #9ca3af;">github.com/sidthebuilder</a> &middot;
         <a href="https://www.linkedin.com/in/shashank-kumar-772a2035b/" style="color: #9ca3af;">LinkedIn</a> &middot;
         <a href="https://orcid.org/0009-0001-7379-955X" style="color: #9ca3af;">ORCID</a><br>
-        Updated August 2026
+        Updated October 2026
     </div>
 
 </div>
